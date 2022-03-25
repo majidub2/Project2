@@ -1,0 +1,13 @@
+<h2> Your randomly generated account number is : {{ accountnumber }}</h2>
+
+<h1> YOUR PRIZE MONEY IS ...: {{ prize }}</h1>
+<br>
+
+
+
+<h2>Previous entries</h2>
+<p>
+    {% for i in all_entries %}
+    {{ prizes.prizes}} won {{ prizes.prize }}
+    <br><br>
+    {% endfor %}\

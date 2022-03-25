@@ -13,6 +13,15 @@ def index():
     data = {"letters" : letters_response.text, "numbers" : numbers_response.text}
     accountnumber_response = requests.post("http://accountnumber:5003", json = data)
     json_accountnumber_response =  accountnumber_response.json()
+
+    newentry = Prizes(accountnumber = json_response["accountnumber"], prize = json_response["prize"])
+    db.session.add(newentry)
+    db.session.commit()
+    all_entries = Prizes.query.order_by(desc("id")).limit(10).all()
+
+    return render_template("index.html", accountnumber = json_response["accountnumber"], prize = json_response["prize"], all_entries = all_entries)
+    
+
     
  
 

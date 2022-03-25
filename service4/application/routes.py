@@ -29,4 +29,4 @@ def prize():
 
     accountnumber = letters + numbers
     accountnumber_and_prize = {"accoutnumber" : accoutnumber, "prize" : prize}
-    return Response(json(accountnumber_and_prize))
+    return Response(json.dumps(accountnumber_and_prize))
