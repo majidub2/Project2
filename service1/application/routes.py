@@ -1,8 +1,14 @@
 from application import app, db
-import requests
 from flask import render_template
+import requests
 from sqlalchemy import desc
-import json 
+import json
+
+class Prizes(db.Model):
+    pk = db.Column(db.Integer, primary_key = True)
+    account_number = db.Column(db.String(10))
+    prize = db.Column(db.String(10))
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -14,12 +20,13 @@ def index():
     accountnumber_response = requests.post("http://accountnumber:5003", json = data)
     json_accountnumber_response =  accountnumber_response.json()
 
-    newentry = Prizes(accountnumber = json_response["accountnumber"], prize = json_response["prize"])
+    
+    newentry = Prizes(account_number=accountnumber_response.json()["account_number"], prize=accountnumber_response.json()['prize'])
     db.session.add(newentry)
     db.session.commit()
-    all_entries = Prizes.query.order_by(desc("id")).limit(10).all()
+    all_entries = Prizes.query.order_by(desc("pk")).limit(5).all()
 
-    return render_template("index.html", accountnumber = json_response["accountnumber"], prize = json_response["prize"], all_entries = all_entries)
+    return render_template("index.html", account_number = json_accountnumber_response["account_number"], prize = json_accountnumber_response["prize"], all_entries = all_entries)
     
 
     

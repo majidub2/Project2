@@ -1,0 +1,64 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: frontend
+    image: majidub2/front-end:latest
+    build: ./service1
+    networks:
+      - "prizes-net"
+    depends_on:
+      - "db"
+      - "letters"
+      - "numbers"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  letters:
+    container_name: letters
+    image: majidub2/letters:latest
+    build: ./service2
+    networks:
+      - "prizes-net"
+  numbers:
+    container_name: numbers
+    image: majidub2/numbers:latest
+    build: ./service3
+    networks:
+      - "prizes-net"
+  accountnumber:
+    container_name: accountnumber
+    image: majidub2/accountnumber:latest
+    build: ./service4
+    networks:
+      - "prizes-net"
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    networks:
+      - prizes-net
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    depends_on:
+      - "frontend"
+  db:
+    container_name: db
+    image: majidub2/db:latest
+    build: ./db
+    volumes:
+      - type: volume
+        source: prize-vol
+        target: /var/lib/mysql
+    networks:
+      - "prizes-net"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: prizes_db
+networks:
+  prizes-net:
+volumes:
+  prize-vol:
