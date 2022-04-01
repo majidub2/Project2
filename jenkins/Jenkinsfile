@@ -12,7 +12,7 @@ pipeline {
                 DOCKER_CREDS = credentials('docker-creds')
             }
             steps{
-                // sh "/bin/bash -c 'docker rmi -f \$(docker images -q)'"
+                sh "/bin/bash -c 'docker rmi -f \$(docker images -q)'"
                 sh "docker-compose build"
                 sh "docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW} "
                 sh "docker-compose push"
