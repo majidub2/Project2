@@ -68,6 +68,7 @@ class TestResponse(TestBase):
         test_json = b'{"account_number": "CBA1013", "prize": "5"}'
         assert json_response == test_json
 
+        python3 -m pytest --cov term-missing=application
 
 
-     
+# python3 -m pytest -p no:warnings --cov=application     
