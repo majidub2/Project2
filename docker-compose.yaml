@@ -60,5 +60,5 @@ services:
       MYSQL_DATABASE: prizes_db
 networks:
   prizes-net:
-# volumes:
-#   prize-vol:
+volumes:
+prize-vol:
