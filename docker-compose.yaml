@@ -61,4 +61,4 @@ services:
 networks:
   prizes-net:
 volumes:
-prize-vol:
+  prize-vol:
