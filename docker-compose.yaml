@@ -58,7 +58,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: prizes_db
-networks:
-  prizes-net:
 volumes:
   prize-vol:
+networks:
+  prizes-net:
