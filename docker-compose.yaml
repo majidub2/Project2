@@ -14,7 +14,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   letters:
     container_name: letters
-    image: majidub2/letters:latest
+    image: majidub2/letters:v2
     build: ./service2
     networks:
       - "prizes-net"
