@@ -2,7 +2,7 @@ version: "3.8"
 services:
   frontend:
     container_name: frontend
-    image: majidub2/front-end:latest
+    image: majidub2/front-end:v2
     build: ./service1
     networks:
       - "prizes-net"
@@ -14,19 +14,19 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   letters:
     container_name: letters
-    image: majidub2/letters:latest
+    image: majidub2/letters:v2
     build: ./service2
     networks:
       - "prizes-net"
   numbers:
     container_name: numbers
-    image: majidub2/numbers:latest
+    image: majidub2/numbers:v2
     build: ./service3
     networks:
       - "prizes-net"
   accountnumber:
     container_name: accountnumber
-    image: majidub2/accountnumber:latest
+    image: majidub2/accountnumber:v2
     build: ./service4
     networks:
       - "prizes-net"
@@ -58,7 +58,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: prizes_db
-networks:
-  prizes-net:
 volumes:
   prize-vol:
+networks:
+  prizes-net:
