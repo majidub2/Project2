@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS prizes (
+    pk INT PRIMARY KEY AUTO_INCREMENT,
+    account_number VARCHAR(7) NOT NULL,
+    prize VARCHAR(10) NOT NULL
+);
