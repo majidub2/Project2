@@ -32,6 +32,7 @@ class TestResponse(TestBase):
         json_response = response.data
         test_json = b'{"account_number": "BCA1353", "prize": "80"}'
         assert json_response == test_json
+
     
     def test_get_accountnumber(self):
         data = {"letters" : 'CAB', "numbers" : '1003'}
@@ -68,7 +69,9 @@ class TestResponse(TestBase):
         test_json = b'{"account_number": "CBA1013", "prize": "5"}'
         assert json_response == test_json
 
-        python3 -m pytest --cov term-missing=application
+    
+
+        
 
 
 # python3 -m pytest -p no:warnings --cov=application     
