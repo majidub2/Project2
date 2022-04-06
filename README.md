@@ -30,7 +30,8 @@ On the first day of my project, I made a kanban style board on Jira software. Th
 <img width="1411" alt="Jira NOT DONE" src="https://user-images.githubusercontent.com/99325840/161988535-c5addf3d-820e-40e3-8137-0826c06331e5.png">
 
 # Final Day:
-<img width="274" alt="Table" src="https://user-images.githubusercontent.com/99325840/161988460-e7b08d73-2522-40d3-a4aa-17062b9b3529.png">
+<img width="1440" alt="Jira Done" src="https://user-images.githubusercontent.com/99325840/162045968-47a345a5-4590-46ae-befb-a57916bb8a5a.png">
+
 
 
 ## Risk Assessment:
