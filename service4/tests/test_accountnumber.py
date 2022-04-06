@@ -48,12 +48,6 @@ class TestResponse(TestBase):
         test_json = b'{"account_number": "ACB1005", "prize": "40"}'
         assert json_response == test_json
 
-    def test_get_accountnumber(self):
-        data = {"letters" : 'BAC', "numbers" : '1007'}
-        response = self.client.post(url_for('prize'), json=data)
-        json_response = response.data
-        test_json = b'{"account_number": "BAC1007", "prize": "40"}'
-        assert json_response == test_json
 
     def test_get_accountnumber(self):
         data = {"letters" : 'BAC', "numbers" : '1011'}
@@ -74,4 +68,4 @@ class TestResponse(TestBase):
         
 
 
-# python3 -m pytest -p no:warnings --cov=application     
+# python3 -m pytest -p no:warnings --cov=application  --cov-report term-missing   
