@@ -32,6 +32,7 @@ class TestResponse(TestBase):
         json_response = response.data
         test_json = b'{"account_number": "BCA1353", "prize": "80"}'
         assert json_response == test_json
+
     
     def test_get_accountnumber(self):
         data = {"letters" : 'CAB', "numbers" : '1003'}
@@ -47,12 +48,6 @@ class TestResponse(TestBase):
         test_json = b'{"account_number": "ACB1005", "prize": "40"}'
         assert json_response == test_json
 
-    def test_get_accountnumber(self):
-        data = {"letters" : 'BAC', "numbers" : '1007'}
-        response = self.client.post(url_for('prize'), json=data)
-        json_response = response.data
-        test_json = b'{"account_number": "BAC1007", "prize": "40"}'
-        assert json_response == test_json
 
     def test_get_accountnumber(self):
         data = {"letters" : 'BAC', "numbers" : '1011'}
@@ -68,7 +63,17 @@ class TestResponse(TestBase):
         test_json = b'{"account_number": "CBA1013", "prize": "5"}'
         assert json_response == test_json
 
-        python3 -m pytest --cov term-missing=application
+    
+    
+    
+
+    
+
+    
+
+    
+
+        
 
 
-# python3 -m pytest -p no:warnings --cov=application     
+# python3 -m pytest -p no:warnings --cov=application  --cov-report term-missing   
