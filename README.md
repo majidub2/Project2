@@ -64,6 +64,41 @@ In order to implement my pipeline, I used a CI server called Jenkins. The tasks 
 
 <img width="656" alt="Screenshot 2022-04-06 at 19 41 12" src="https://user-images.githubusercontent.com/99325840/162045793-96b42d2d-e423-479d-9e8d-c3035fe21320.png">
 
+# Ansible:
+Ansible is a software used to configure and spin up multiple nodes at any given time. Ansible was used to set up  environments with the necessary dependencies, such as python, NGINX and Docker by temporarily connecting remotely via SSH into virtual machines and running a set of predefined ‘plays’. Evidence of usage is shown below:
+
+<img width="865" alt="Screenshot 2022-04-07 at 14 08 13" src="https://user-images.githubusercontent.com/99325840/162206142-14e1e4e3-39f8-4c70-83e8-7f92d8d857b8.png">
+
+<img width="1440" alt="Screenshot 2022-04-05 at 17 33 04" src="https://user-images.githubusercontent.com/99325840/162205986-f5e69cb1-9402-4f27-8833-6243c034b795.png">
+
+<img width="1142" alt="Screenshot 2022-04-06 at 14 37 42" src="https://user-images.githubusercontent.com/99325840/162206177-de200946-f607-42f3-a789-c10274174725.png">
+
+
+## Testing:
+Service1:
+For my front-end tests, I wanted to ensure that a 7 digit account number is displayed on the homepage, alongside the corrosponding prize. This was high priority as the users must be able to see this information.
+<img width="1111" alt="Screenshot 2022-04-07 at 14 17 06" src="https://user-images.githubusercontent.com/99325840/162208164-443db911-fc4f-45f7-92e1-d71f62a45947.png">
+
+Service2:
+For my letter generating service, I wanted to assert that a specific combination was within the response data. This was high priority as the letters generated determine whether a user wins a prize or not.
+
+<img width="1093" alt="Screenshot 2022-04-07 at 14 17 46" src="https://user-images.githubusercontent.com/99325840/162208232-24839c22-d387-4bc2-88a0-8d02aecd55e0.png">
+
+Service3:
+For my number generating service, I wanted to assert that a certain random number between 1000 and 9999 was within the response data. This was high priority as the number generated determine how large the prize recieved is, on the condition that theyre eligible for one.
+
+<img width="1073" alt="Screenshot 2022-04-07 at 14 18 15" src="https://user-images.githubusercontent.com/99325840/162208253-5738159e-d314-4de9-88a1-15d7be75f6f6.png">
+
+Service4:
+In my prize determining service, I tested every possible prize that could be won by a user was possible, along with one test case for a user who doesnt win a prize. Unfortunately, however, I could not recieve 100% coverage as certain conditionals wernt are never run in the tests. As this was also high priority to test, I have manually tested my app and have seen every possible prize that could be won by constantly refreshing the app. Once I saw every possible outcome, I knew that I had an issue with my test and not my application. 
+
+<img width="1082" alt="Screenshot 2022-04-07 at 14 18 41" src="https://user-images.githubusercontent.com/99325840/162208273-e1955bc9-4727-48c6-8e62-ed35707040bd.png">
+
+
+
+
+
+
  
 
 
