@@ -64,7 +64,7 @@ In order to implement my pipeline, I used a CI server called Jenkins. The tasks 
 
 <img width="656" alt="Screenshot 2022-04-06 at 19 41 12" src="https://user-images.githubusercontent.com/99325840/162045793-96b42d2d-e423-479d-9e8d-c3035fe21320.png">
 
-# Ansible:
+### Ansible:
 Ansible is a software used to configure and spin up multiple nodes at any given time. Ansible was used to set up  environments with the necessary dependencies, such as python, NGINX and Docker by temporarily connecting remotely via SSH into virtual machines and running a set of predefined ‘plays’. Evidence of usage is shown below:
 
 <img width="865" alt="Screenshot 2022-04-07 at 14 08 13" src="https://user-images.githubusercontent.com/99325840/162206142-14e1e4e3-39f8-4c70-83e8-7f92d8d857b8.png">
