@@ -42,21 +42,26 @@ A risk assessment is where you identify and analyze potential events that may ne
 
 ## CI/CD Pipeline:
 
-Continuous Integration refers to the automated integration of code into a software project. It allowed me to generate and implement new functionality with ease as building and testing is handled through automation.
+Continuous Integration refers to the automated integration of code into a software project. It allowed me to  implement new functionality with ease as building and testing was handled through automation.
+
 Some of the benefits of employing a CI pipeline to a production workflow are:
 - It reduces the money and time that is spent by manually building, testing, and deploying code. 
 - Using a VCS increases transparency between teams as all changes are easily trackable and attributable to the individual that made them. Teams are therefore more aware of each other's progress.
  
-Continuous delivery is an extension CI that seeks to deliver new features to customers on a regular basis. So while CI integrates code regularly, continuous delivery delivers that code regularly.
+Continuous delivery is an extension CI that seeks to deliver new features to customers on a regular basis.
 
--This allows for more user feedback as development teams can now show off new product features much more frequently, allowing them to adjust their product accordingly and thus producing better products for the consumers
+- This allows for more user feedback as development teams can now show off new product features much more frequently, allowing them to adjust their product accordingly and thus producing better products for the consumers
+
+
+### Jenkins
 
 In order to implement my pipeline, I used a CI server called Jenkins. The tasks that it automated for me were:
--Testing: All tests are carried out and reports archived for viewing. 
 
--Building and pushing images: Docker credentials are uploaded from Jenkins, which are then used to push the images of the services once they are built 
+- Testing: All tests are carried out and reports archived for viewing. 
 
--Deploy Stack: This starts NGINX, initializes the Docker Swarm and adds the managers and worker nodes. The stack is deployed with a Docker-Compose file. 
+- Building and pushing images: Docker credentials are uploaded from Jenkins, which are then used to push the images of the services once they are built 
+
+- Deploy Stack: This starts NGINX, initializes the Docker Swarm and adds the managers and worker nodes. The stack is deployed with a Docker-Compose file. 
 
 <img width="1269" alt="Screenshot 2022-04-06 at 17 38 47" src="https://user-images.githubusercontent.com/99325840/162024790-0af303ed-76aa-4d12-b27b-7dca5a804c7e.png">
 
