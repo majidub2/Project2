@@ -48,21 +48,24 @@ Some of the benefits of employing a CI pipeline to a production workflow are:
 - Using a VCS increases transparency between teams as all changes are easily trackable and attributable to the individual that made them. Teams are therefore more aware of each other's progress.
  
 Continuous delivery is an extension CI that seeks to deliver new features to customers on a regular basis. So while CI integrates code regularly, continuous delivery delivers that code regularly.
+
 -This allows for more user feedback as development teams can now show off new product features much more frequently, allowing them to adjust their product accordingly and thus producing better products for the consumers
 
 In order to implement my pipeline, I used a CI server called Jenkins. The tasks that it automated for me were:
 -Testing: All tests are carried out and reports archived for viewing. 
-- Building and pushing images: Docker credentials are uploaded from Jenkins, which are then used to push the images of the services once they are built      - Deploy Stack: This starts NGINX, initializes the Docker Swarm and adds the managers and worker nodes. The stack is deployed with a Docker-Compose file. 
+
+-Building and pushing images: Docker credentials are uploaded from Jenkins, which are then used to push the images of the services once they are built 
+
+-Deploy Stack: This starts NGINX, initializes the Docker Swarm and adds the managers and worker nodes. The stack is deployed with a Docker-Compose file. 
 
 <img width="1269" alt="Screenshot 2022-04-06 at 17 38 47" src="https://user-images.githubusercontent.com/99325840/162024790-0af303ed-76aa-4d12-b27b-7dca5a804c7e.png">
 
 
 ## Technologies:
 
-<img width="611" alt="pipeline" src="https://user-images.githubusercontent.com/99325840/162045822-7ee15cab-5ed8-42f3-bbf6-4330fbd7fc1f.png">
-
-
 <img width="656" alt="Screenshot 2022-04-06 at 19 41 12" src="https://user-images.githubusercontent.com/99325840/162045793-96b42d2d-e423-479d-9e8d-c3035fe21320.png">
+
+<img width="611" alt="pipeline" src="https://user-images.githubusercontent.com/99325840/162045822-7ee15cab-5ed8-42f3-bbf6-4330fbd7fc1f.png">
 
 ### Ansible:
 Ansible is a software used to configure and spin up multiple nodes at any given time. Ansible was used to set up  environments with the necessary dependencies, such as python, NGINX and Docker by temporarily connecting remotely via SSH into virtual machines and running a set of predefined ‘plays’. Evidence of usage is shown below:
