@@ -81,6 +81,11 @@ Ansible is a software used to configure and spin up multiple nodes at any given 
 
 <img width="1142" alt="Screenshot 2022-04-06 at 14 37 42" src="https://user-images.githubusercontent.com/99325840/162206177-de200946-f607-42f3-a789-c10274174725.png">
 
+### Network Graph: 
+
+<img width="895" alt="Screenshot 2022-04-07 at 15 16 52" src="https://user-images.githubusercontent.com/99325840/162220663-35a9b483-0378-41f1-9573-f1c7db485e62.png">
+<img width="896" alt="Screenshot 2022-04-07 at 15 17 16" src="https://user-images.githubusercontent.com/99325840/162220683-358abfe1-2ab4-4696-b829-a7afe0412bb1.png">
+
 
 ## Testing:
 Service1:
