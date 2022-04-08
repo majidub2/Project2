@@ -68,7 +68,7 @@ In order to implement my pipeline, I used a CI server called Jenkins. The tasks 
 
 ## Technologies:
 
-<img width="656" alt="Screenshot 2022-04-06 at 19 41 12" src="https://user-images.githubusercontent.com/99325840/162045793-96b42d2d-e423-479d-9e8d-c3035fe21320.png">
+
 
 <img width="611" alt="pipeline" src="https://user-images.githubusercontent.com/99325840/162045822-7ee15cab-5ed8-42f3-bbf6-4330fbd7fc1f.png">
 
