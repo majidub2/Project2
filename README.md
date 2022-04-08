@@ -93,12 +93,12 @@ For my front-end tests, I wanted to ensure that a 7 digit account number is disp
 <img width="1111" alt="Screenshot 2022-04-07 at 14 17 06" src="https://user-images.githubusercontent.com/99325840/162208164-443db911-fc4f-45f7-92e1-d71f62a45947.png">
 
 Service2:
-For my letter generating service, I wanted to assert that a specific combination was within the response data. This was high priority as the letters generated determine whether a user wins a prize or not.
+For my letter generating service, I wanted to assert that a specific combination was within the response data. This was high priority as the letters generated determine how large the prize recieved is, on the condition that theyre eligible for one.
 
 <img width="1093" alt="Screenshot 2022-04-07 at 14 17 46" src="https://user-images.githubusercontent.com/99325840/162208232-24839c22-d387-4bc2-88a0-8d02aecd55e0.png">
 
 Service3:
-For my number generating service, I wanted to assert that a certain random number between 1000 and 9999 was within the response data. This was high priority as the number generated determine how large the prize recieved is, on the condition that theyre eligible for one.
+For my number generating service, I wanted to assert that a certain random number between 1000 and 9999 was within the response data. This was high priority as the number determines whether a user wins a prize or not.
 
 <img width="1073" alt="Screenshot 2022-04-07 at 14 18 15" src="https://user-images.githubusercontent.com/99325840/162208253-5738159e-d314-4de9-88a1-15d7be75f6f6.png">
 
